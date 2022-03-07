@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Geonames - AJAX, PHP. City, street, country information | IT Career Switch</title>
+		<meta name="description" content="API, AJAX, PHP, City, ItCareerSwitch">
+		<meta name="author" content="Timothy Holland">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="favicon.ico" rel="icon">
+		<link rel="stylesheet" type="text/css" href="libs/css/styles.css">
+	</head>
+
+	<body>
+	
+	<table id="tableAPIs">
+		<thead>
+			<tr>
+					<th>API Name</th>
+					<th>API Description</th>
+					<th>Check it out!</th>
+			</tr>
+		</thead>
+			<tr>
+				<td class="col1">Street Name</td>
+				<td>
+					<p> Enter a street name or just a few letters...			
+						<input type="text" value="" id="q" class="float"></input>
+					</p>
+					<p> and select a country 
+						<select name="countries" id="countryCodeStreet" class="float">
+							<option value="AT">Austria</option>
+							<option value="AU">Australia</option>
+							<option value="CH">Switzerland</option>
+							<option value="CX">Christmas Island</option>
+							<option value="DK">Denmark</option>
+							<option value="EE">Estonia</option>
+							<option value="ES">Spain</option>
+							<option value="FI">Finland</option>
+							<option value="FR">France</option>
+							<option value="GF">French Guiana</option>
+							<option value="GP">Guadeloupe</option>
+							<option value="IS">Iceland</option>
+							<option value="LU">Luxembourg</option>
+							<option value="MQ">Martinique</option>
+							<option value="NF">Norfolk Island</option>
+							<option value="NL">Netherlands</option>
+							<option value="NO">Norway</option>
+							<option value="PL">Poland</option>
+							<option value="PR">Puerto Rico</option>
+							<option value="SG">Singapore</option>
+							<option value="SI">Slovenia</option>
+							<option value="SK">Slovakia</option>
+							<option value="US">United States</option>
+						</select>
+					</p>
+					and I'll list the first street name and where it's found.
+				</td>
+				<td>
+					<button id="btnStreetName" class="buttons">StreetName</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="col1">Nearest Neighbours</td>
+				<td>Simply select a country <br> and I'll list all its nearest neighbours
+					<select id="neighboursSelCountry" class="float"">
+						<option value="2635167" name="UK">UK</option>
+						<option value="3017382" name="France">France</option>
+						<option value="3041565" name="Andorra">Andorra</option>
+						<option value="2510769" name="Spain">Spain</option>
+						<option value="2921044" name="Germany"> Germany </option>
+						<option value="2658434" name="Switzerland"> Switzerland</option>
+						<option value="798544" name="Poland"> Poland</option>
+						<option value="690791" name="Ukraine"> Ukraine</option>
+						<option value="2017370" name="Russia"> Russia</option>
+					</select>					
+				</td>
+				<td><button id="btnNeighbours" class="buttons">Nearest Countries</button></td>
+			</tr>
+			
+			<tr>				
+				<td class="col1">Wiki City Search</td>
+					<td>Click on these Ukrainian cities and learn more!
+						<select class="float" id="ukraineCity">
+							<option value="odessa">Odessa</option>
+							<option value="kharkiv">Kharkiv</option>
+							<option value="lviv">Lviv</option>
+							<option value="donetsk">Donetsk</option>
+							<option value="sevastopol">Sevastopol</option>
+							<option value="Mariupol">Mariupol</option>
+						</select>
+					</td>
+				<td>
+					<button id="btnCityInfo" class="buttons">City Summary</button>
+				</td>
+			</tr>
+			<tr>
+			
+					<td colspan="3">
+						<h3> Results</h3>
+					<p>The street name is: <span id="streetName"></span></p>
+					<p>Found in the locality of: <span id="locality"></span></p>
+					
+					<p>[ <span id="citySelected"></span> ] has [ <span id="txtNumOfNeighbours"></span> ] neighbour(s):  <span id="txtCountryNeighbour"></span>.</p>
+					<p>City summary: <span id="citySummary"></span></p>				
+					</td>
+					
+			</tr>
+	</table>
+		
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+
+	</body>
+
+</html>
